@@ -1,5 +1,6 @@
 import React from 'react'
 import './styles.css'
+import TransformersCursor from '../../components/ui/TransformersCursor'
 import { Orbitron } from 'next/font/google'
 
 export const metadata = {
@@ -16,7 +17,8 @@ export default async function RootLayout(props: { children: React.ReactNode }) {
 
   return (
     <html lang="en" className={orbitron.className} suppressHydrationWarning>
-      <body className="bg-black">
+      <body className="bg-black" style={{ cursor: 'none' }}>
+        <TransformersCursor />
         <main>{children}</main>
       </body>
     </html>
